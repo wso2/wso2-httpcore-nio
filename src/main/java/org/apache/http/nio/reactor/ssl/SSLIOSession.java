@@ -50,6 +50,8 @@ import org.apache.http.nio.reactor.SessionBufferStatus;
 import org.apache.http.nio.reactor.SocketAccessor;
 import org.apache.http.util.Args;
 import org.apache.http.util.Asserts;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  * <tt>SSLIOSession</tt> is a decorator class intended to transparently extend
@@ -122,8 +124,22 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
         if (this.sslMode == SSLMode.CLIENT) {
             final SocketAddress address = session.getRemoteAddress();
             if (address instanceof InetSocketAddress) {
-                final String hostname = ((InetSocketAddress) address).getHostName();
-                final int port = ((InetSocketAddress) address).getPort();
+                final String endpoint = (String) session.getAttribute("endPointURI");
+                String hostname;
+                int port;
+                if (endpoint != null && !endpoint.isEmpty()) {
+                    URI endpointURI;
+                    try {
+                        endpointURI = new URI(endpoint);
+                    } catch (URISyntaxException e) {
+                        throw new IllegalArgumentException("Invalid endpointURI");
+                    }
+                    hostname = endpointURI.getHost();
+                    port = endpointURI.getPort();
+                } else {
+                    hostname = ((InetSocketAddress) address).getHostName();
+                    port = ((InetSocketAddress) address).getPort();
+                }
                 this.sslEngine = sslContext.createSSLEngine(hostname, port);
             } else {
                 this.sslEngine = sslContext.createSSLEngine();
