@@ -31,7 +31,7 @@
     <version>4.3.3</version>
   </parent>
   <artifactId>httpcore-nio</artifactId>
-  <version>4.3.3-wso2v1</version>
+  <version>4.3.3-wso2v2-SNAPSHOT</version>
   <name>Apache HttpCore NIO</name>
   <inceptionYear>2005</inceptionYear>
   <description>
