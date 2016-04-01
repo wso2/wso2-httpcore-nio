@@ -24,78 +24,79 @@
    information on the Apache Software Foundation, please see
    <http://www.apache.org />.
  -->
- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.apache.httpcomponents</groupId>
-    <artifactId>httpcomponents-core</artifactId>
-    <version>4.3.3</version>
-  </parent>
-  <artifactId>httpcore-nio</artifactId>
-  <version>4.3.3-wso2v2-SNAPSHOT</version>
-  <name>Apache HttpCore NIO</name>
-  <inceptionYear>2005</inceptionYear>
-  <description>
-   HttpComponents Core (non-blocking I/O)
-  </description>
-  <url>http://hc.apache.org/httpcomponents-core-ga</url>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcomponents-core</artifactId>
+        <version>4.3.3</version>
+    </parent>
+    <artifactId>httpcore-nio</artifactId>
+    <version>4.3.3-wso2v2-SNAPSHOT</version>
+    <name>Apache HttpCore NIO</name>
+    <inceptionYear>2005</inceptionYear>
+    <description>
+        HttpComponents Core (non-blocking I/O)
+    </description>
+    <url>http://hc.apache.org/httpcomponents-core-ga</url>
 
-   <scm>
-      <connection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</connection>
-      <developerConnection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</developerConnection>
-      <url>https://github.com/wso2/wso2-httpcore-nio.git/</url>
-      <tag>HEAD</tag>
-   </scm>
+    <scm>
+        <connection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</connection>
+        <developerConnection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</developerConnection>
+        <url>https://github.com/wso2/wso2-httpcore-nio.git/</url>
+        <tag>HEAD</tag>
+    </scm>
 
-  <properties>
-    <maven.javadoc.skip>true</maven.javadoc.skip>
-    <project.scm.id>scm-server</project.scm.id>
-  </properties>
+    <properties>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <project.scm.id>scm-server</project.scm.id>
+    </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpcore</artifactId>
-      <version>4.3.3</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>commons-logging</groupId>
-      <artifactId>commons-logging</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.3.3</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-  <build>
-	<extensions>
-  	    <extension>
-    	<groupId>org.apache.maven.wagon</groupId>
-    	<artifactId>wagon-ssh</artifactId>
-    	<version>2.1</version>
-  	    </extension>
-	</extensions>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-        <includes>
-            <include>**/*.properties</include>
-        </includes>
-      </resource>
-    </resources>
-    <plugins>
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>2.1</version>
+            </extension>
+        </extensions>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
 
-			<plugin>
+            <plugin>
                 <groupId>org.codehaus.gmaven</groupId>
                 <artifactId>gmaven-plugin</artifactId>
                 <version>1.2</version>
@@ -108,8 +109,9 @@
                         </goals>
                         <configuration>
                             <source>
-                                import java.util.Date 
-                                import java.text.MessageFormat 
+                                import java.util.Date
+                                import java.text.MessageFormat
+
                                 project.properties['build_date'] = MessageFormat.format("{0,date,MMMMM dd, yyyy}", new Date())
                             </source>
                         </configuration>
@@ -135,21 +137,21 @@
             </plugin>
 
 
-    </plugins>
-  </build>
+        </plugins>
+    </build>
 
 
-  <distributionManagement>
+    <distributionManagement>
         <repository>
-          <id>nexus-releases</id>
-          <name>WSO2 Release Distribution Repository</name>
-          <url>http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/</url>
-      </repository>
-      <snapshotRepository>
-          <id>wso2.snapshots</id>
-          <name>Apache Snapshot Repository</name>
-          <url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>
-      </snapshotRepository>
-  </distributionManagement>
+            <id>nexus-releases</id>
+            <name>WSO2 Release Distribution Repository</name>
+            <url>http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>wso2.snapshots</id>
+            <name>Apache Snapshot Repository</name>
+            <url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
