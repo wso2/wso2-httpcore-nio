@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.5">
+<file name="/home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/NHttpServer.java">
+</file>
+<file name="/home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/NHttpReverseProxy.java">
+</file>
+<file name="/home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/ElementalEchoServer.java">
+</file>
+<file name="/home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/NHttpClient.java">
+</file>
+</checkstyle>

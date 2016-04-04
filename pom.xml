@@ -32,10 +32,10 @@
         <artifactId>httpcomponents-core</artifactId>
         <version>4.3.3</version>
     </parent>
-    <artifactId>httpcore-nio</artifactId>
-    <name>httpcore.nio.wso2</name>
+    <artifactId>httpcore-nio-parent</artifactId>
+    <name>httpcore.nio.wso2-parent</name>
     <version>4.3.3-wso2v2-SNAPSHOT</version>
-    <packaging>bundle</packaging>
+    <packaging>pom</packaging>
 
     <inceptionYear>2005</inceptionYear>
     <description>
@@ -57,28 +57,33 @@
         <httpcore.nio.version>4.3.3.wso2v2-SNAPSHOT</httpcore.nio.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>${httpcore.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcore.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.8.2</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>1.9.5</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>1.1.1</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <extensions>
@@ -137,29 +142,14 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>1.4.0</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Export-Package>
-                            org.apache.http.nio.*;version="${httpcore.nio.version}",
-                            org.apache.http.impl.nio.*;version="${httpcore.nio.version}",
-                        </Export-Package>
-                        <Import-Package>
-                            org.apache.http.*;version="${httpcore.version}",
-                            *;resolution:=optional
-                        </Import-Package>
-                    </instructions>
-                </configuration>
-            </plugin>
+
         </plugins>
     </build>
 
+    <modules>
+        <module>modules/http-core-nio</module>
+        <module>orbit/http-core-nio</module>
+    </modules>
 
     <distributionManagement>
         <repository>

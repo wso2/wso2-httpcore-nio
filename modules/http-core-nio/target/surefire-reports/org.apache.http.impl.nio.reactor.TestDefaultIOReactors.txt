@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.http.impl.nio.reactor.TestDefaultIOReactors
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.028 sec - in org.apache.http.impl.nio.reactor.TestDefaultIOReactors

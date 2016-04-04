@@ -1,0 +1,307 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2016-04-04T12:41:25+05:30
+Notes: 0
+Binaries: 1
+Archives: 0
+Standards: 269
+
+Apache Licensed: 269
+Generated Documents: 0
+
+JavaDocs are generated and so license header is optional
+Generated files do not required license headers
+
+0 Unknown Licenses
+
+*******************************
+
+Unapproved licenses:
+
+
+*******************************
+
+Archives:
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require AL headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc will be marked N
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/pom.xml
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/NHttpServer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/NHttpReverseProxy.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/ElementalEchoServer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/examples/org/apache/http/examples/nio/NHttpClient.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestBasicAsyncRequestConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestBasicAsyncResponseProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestErrorResponseProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestHttpAsyncService.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestHttpAsyncRequestExecutor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestBasicAsyncRequestHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestHttpAsyncRequester.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestBasicAsyncRequestProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestBasicAsyncResponseConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestBasicAsyncClientExchangeHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/protocol/TestUriHttpAsyncRequestHandlerMapper.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/RndTestPatternGenerator.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/SimpleRequestHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestHttpsAsyncHandlers.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestPipelining.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestHttpAsyncHandlerCancellable.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestHttpsAsyncTimeout.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestTruncatedChunks.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestHttpAsyncHandlers.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestHttpAsyncPrematureTermination.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestCustomSSL.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/integration/TestClientOutOfSequenceResponse.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/SSLTestContexts.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/SimpleIOReactorExceptionHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/Wire.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/HttpServerNio.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/HttpCoreNIOTestBase.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/LoggingNHttpClientConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/LoggingIOSession.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/LoggingSSLClientConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/LoggingServerConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/LoggingNHttpServerConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/HttpClientNio.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/LoggingSSLServerConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/testserver/LoggingClientConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/pool/TestNIOConnPool.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/pool/TestRouteSpecificPool.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/util/ContentEncoderMock.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/util/TestBuffers.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/nio/util/ContentDecoderMock.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/ReadableByteChannelMock.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/OoopsieRuntimeException.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/TestContentChannel.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/reactor/TestDefaultIOReactors.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/reactor/TestSessionInOutBuffers.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/reactor/TestDefaultIOReactorsSSL.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/reactor/TestDefaultListeningIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/reactor/ExceptionEventTest.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/TestDefaultNHttpClientConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/TestDefaultNHttpServerConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/TestNHttpConnectionBase.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/TestHttpMessageParser.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/TestLengthDelimitedDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/TestIdentityDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/TestChunkDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/CodecTestUtils.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/TestLengthDelimitedEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/TestIdentityEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/codecs/TestChunkEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/impl/nio/pool/TestBasicNIOConnPool.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/WritableByteChannelMock.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/java/org/apache/http/ByteChannelMock.java
+  B     /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/test/resources/test.keystore
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/BufferingHttpClientHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/ThrottlingHttpServiceHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/NHttpRequestHandlerResolver.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/NHttpHandlerBase.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/NHttpRequestHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/SimpleNHttpRequestHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/NHttpRequestHandlerRegistry.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/AsyncNHttpServiceHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/ThrottlingHttpClientHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/BasicAsyncRequestExecutionHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/AsyncNHttpClientHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/NullNHttpEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/NHttpRequestExecutionHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/BufferingHttpServiceHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/EventListener.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/HttpRequestExecutionHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/HttpAsyncRequestExecutionHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/HttpAsyncRequestHandlerRegistry.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/protocol/NHttpResponseTrigger.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/params/NIOReactorParams.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/params/NIOReactorParamBean.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/entity/ContentListener.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/entity/ConsumingNHttpEntityTemplate.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/entity/BufferingNHttpEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/entity/SkipContentListener.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/nio/entity/NHttpEntityWrapper.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/reactor/SSLIOSessionHandlerAdaptor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/reactor/SSLSetupHandlerAdaptor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/reactor/SSLIOSession.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/reactor/SSLSetupHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/reactor/SessionHandle.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/reactor/SSLIOSessionHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/reactor/SSLMode.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/ssl/SSLServerIOEventDispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/ssl/SSLClientIOEventDispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/SSLServerIOEventDispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/codecs/HttpRequestParser.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/codecs/HttpResponseParser.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/codecs/HttpRequestWriter.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/codecs/HttpResponseWriter.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/DefaultServerIOEventDispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/DefaultClientIOEventDispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java-deprecated/org/apache/http/impl/nio/SSLClientIOEventDispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpMessageWriter.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/IOControl.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/AbstractAsyncResponseConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncRequestHandlerMapper.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncExchange.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncRequestHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/BasicAsyncResponseConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncClientExchangeHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/AbstractAsyncRequestConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/BasicAsyncRequestProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncRequestExecutor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncResponseProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/UriHttpAsyncRequestHandlerMapper.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncService.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncRequestHandlerResolver.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/NullRequestHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/NullRequestConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/BasicAsyncRequestHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncRequester.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncExpectationVerifier.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncResponseConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/ErrorResponseProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/BasicAsyncResponseProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/BasicAsyncRequestConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/MessageState.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncRequestConsumer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/HttpAsyncRequestProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/protocol/BasicAsyncClientExchangeHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/SessionRequest.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/SessionInputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/IOReactorException.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/SessionRequestCallback.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/SocketAccessor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/EventMask.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/SessionOutputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/IOEventDispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/ssl/SSLIOSession.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/ssl/SSLSetupHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/ssl/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/ssl/SSLMode.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/IOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/IOReactorExceptionHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/ListenerEndpoint.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/IOSession.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/IOReactorStatus.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/ConnectingIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/ListeningIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/reactor/SessionBufferStatus.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/ContentEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/params/NIOReactorPNames.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/params/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpServiceHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpServerEventHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/ContentEncoderChannel.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpClientIOTarget.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpClientEventHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/NStringEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/EntityAsyncContentProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/ContentOutputStream.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/ProducingNHttpEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/HttpAsyncContentProducer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/ConsumingNHttpEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/NFileEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/ContentInputStream.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/ContentBufferEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/entity/NByteArrayEntity.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/FileContentEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/FileContentDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/ContentDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpMessageParserFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpMessageParser.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/pool/LeaseRequest.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/pool/RouteSpecificPool.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/pool/NIOConnFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/pool/SocketAddressResolver.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/pool/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/pool/AbstractNIOConnPool.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpServerConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpClientConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/ContentDecoderChannel.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpServerIOTarget.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpMessageWriterFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/BufferInfo.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/SimpleInputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/ContentOutputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/ByteBufferAllocator.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/DirectByteBufferAllocator.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/ContentInputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/SharedOutputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/SimpleOutputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/SharedInputBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/ExpandableBuffer.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/util/HeapByteBufferAllocator.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/nio/NHttpClientHandler.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/SSLContextUtils.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/DefaultNHttpClientConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/NHttpConnectionBase.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/SessionOutputBufferImpl.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/ListenerEndpointClosedCallback.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/SessionRequestHandle.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/SessionInputBufferImpl.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/IOReactorConfig.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/ListenerEndpointImpl.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/SessionClosedCallback.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/AbstractIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/AbstractIODispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/ChannelEntry.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/IOSessionImpl.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/AbstractMultiworkerIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/DefaultListeningIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/DefaultConnectingIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/SessionRequestImpl.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/InterestOpsCallback.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/InterestOpEntry.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/ExceptionEvent.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/reactor/BaseIOReactor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/DefaultNHttpServerConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/SessionHttpContext.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/DefaultHttpClientIODispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/NHttpClientEventHandlerAdaptor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/DefaultHttpServerIODispatch.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/SSLNHttpServerConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/DefaultNHttpServerConnection.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/DefaultNHttpClientConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpRequestWriter.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/AbstractMessageWriter.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/ChunkEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/ChunkDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpResponseParserFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpRequestParser.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpRequestParserFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/IdentityDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/AbstractMessageParser.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/LengthDelimitedDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/AbstractContentEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpResponseWriterFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpResponseParser.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/LengthDelimitedEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/AbstractContentDecoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpRequestWriterFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/IdentityEncoder.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/codecs/DefaultHttpResponseWriter.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/pool/BasicNIOConnFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/pool/BasicNIOConnPool.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/pool/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/pool/BasicNIOPoolEntry.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/package-info.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/SSLNHttpClientConnectionFactory.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/java/org/apache/http/impl/nio/NHttpServerEventHandlerAdaptor.java
+  AL    /home/buddhima/wso2/git/wso2-httpcore-nio/modules/http-core-nio/src/main/resources/org/apache/http/nio/version.properties
+ 
+*****************************************************
+ Printing headers for files without AL header...
+ 
+ 

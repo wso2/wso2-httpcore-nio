@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.http.impl.nio.codecs.TestChunkEncoder
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in org.apache.http.impl.nio.codecs.TestChunkEncoder
