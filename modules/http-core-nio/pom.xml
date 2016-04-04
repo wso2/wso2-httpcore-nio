@@ -35,7 +35,7 @@
     </parent>
     <artifactId>httpcore-nio</artifactId>
     <name>httpcore.nio.wso2</name>
-    <version>4.3.3-wso2v2-SNAPSHOT</version>
+    <version>4.3.3.wso2v2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <inceptionYear>2005</inceptionYear>
