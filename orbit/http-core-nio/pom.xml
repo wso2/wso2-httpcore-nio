@@ -58,12 +58,6 @@
             <artifactId>httpcore-nio</artifactId>
             <version>4.3.3-wso2v2-SNAPSHOT</version>
             <optional>true</optional>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpcore</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
