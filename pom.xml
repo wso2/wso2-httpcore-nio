@@ -33,8 +33,10 @@
         <version>4.3.3</version>
     </parent>
     <artifactId>httpcore-nio</artifactId>
+    <name>httpcore.nio.wso2</name>
     <version>4.3.3-wso2v2-SNAPSHOT</version>
-    <name>Apache HttpCore NIO</name>
+    <packaging>bundle</packaging>
+
     <inceptionYear>2005</inceptionYear>
     <description>
         HttpComponents Core (non-blocking I/O)
@@ -51,14 +53,15 @@
     <properties>
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <project.scm.id>scm-server</project.scm.id>
+        <httpcore.version>[4.3.3.wso2v1, 4.4.0)</httpcore.version>
+        <httpcore.nio.version>4.3.3.wso2v2-SNAPSHOT</httpcore.nio.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
-            <version>4.3.3</version>
-            <scope>compile</scope>
+            <version>${httpcore.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -95,7 +98,6 @@
             </resource>
         </resources>
         <plugins>
-
             <plugin>
                 <groupId>org.codehaus.gmaven</groupId>
                 <artifactId>gmaven-plugin</artifactId>
@@ -135,8 +137,26 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-
-
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>1.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Name>${project.artifactId}</Bundle-Name>
+                        <Export-Package>
+                            org.apache.http.nio.*;version="${httpcore.nio.version}",
+                            org.apache.http.impl.nio.*;version="${httpcore.nio.version}",
+                        </Export-Package>
+                        <Import-Package>
+                            org.apache.http.*;version="${httpcore.version}",
+                            *;resolution:=optional
+                        </Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
