@@ -44,17 +44,11 @@
     </description>
     <url>http://hc.apache.org/httpcomponents-core-ga</url>
 
-    <scm>
-        <connection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</connection>
-        <developerConnection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</developerConnection>
-        <url>https://github.com/wso2/wso2-httpcore-nio.git/</url>
-        <tag>HEAD</tag>
-    </scm>
-
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -74,13 +68,6 @@
     </dependencies>
 
     <build>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh</artifactId>
-                <version>2.1</version>
-            </extension>
-        </extensions>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -92,34 +79,24 @@
         </resources>
         <plugins>
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.atlassian.maven.plugins</groupId>
-                <artifactId>maven-clover2-plugin</artifactId>
-                <configuration>
-                    <flushPolicy>threaded</flushPolicy>
-                    <flushInterval>100</flushInterval>
-                    <targetPercentage>50%</targetPercentage>
-                </configuration>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.8</version>
                 <executions>
                     <execution>
-                        <id>site</id>
-                        <phase>pre-site</phase>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>instrument</goal>
+                            <goal>add-source</goal>
                         </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/java-deprecated</source>
+                            </sources>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
-    <reporting>
-        <plugins>
-            <plugin>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </reporting>
 </project>
