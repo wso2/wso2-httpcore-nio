@@ -27,7 +27,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.apache.httpcomponents.wso2</groupId>
+    <parent>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore-nio-parent</artifactId>
+        <version>4.3.3-wso2v2-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+
+    <groupId>org.wso2.orbit.org.apache.httpcomponents</groupId>
     <artifactId>httpcore-nio</artifactId>
     <name>Apache HTTPCore-NIO - WSO2 Orbit</name>
     <version>4.3.3.wso2v2-SNAPSHOT</version>
@@ -39,31 +46,10 @@
     </description>
     <url>http://hc.apache.org/httpcomponents-core-ga</url>
 
-    <repositories>
-        <repository>
-            <id>wso2-nexus</id>
-            <name>WSO2 internal Repository</name>
-            <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore-nio</artifactId>
-            <version>${project.version}</version>
-            <optional>true</optional>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpcore</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
@@ -91,22 +77,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <properties>
-        <httpcore.imp.pkg.version>[4.3.3.wso2v1, 4.4.0)</httpcore.imp.pkg.version>
-    </properties>
-
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>WSO2 Release Distribution Repository</name>
-            <url>http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>wso2.snapshots</id>
-            <name>Apache Snapshot Repository</name>
-            <url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
