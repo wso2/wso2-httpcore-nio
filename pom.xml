@@ -32,8 +32,9 @@
         <artifactId>httpcomponents-core</artifactId>
         <version>4.3.3</version>
     </parent>
+
     <artifactId>httpcore-nio-parent</artifactId>
-    <name>Apache HTTPCore-NIO - PARENT</name>
+    <name>Apache HTTPCore-NIO - Parent</name>
     <version>4.3.3.wso2v2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -55,6 +56,9 @@
         <project.scm.id>scm-server</project.scm.id>
         <httpcore.version>4.3.3</httpcore.version>
         <httpcore.nio.version>4.3.3.wso2v2-SNAPSHOT</httpcore.nio.version>
+
+        <httpcore.imp.pkg.version>[4.3.3.wso2v1, 4.4.0)</httpcore.imp.pkg.version>
+        <httpcore.nio.exp.pkg.version>${httpcore.nio.version}</httpcore.nio.exp.pkg.version>
 
         <junit.version>4.9</junit.version>
         <mockito.version>1.8.5</mockito.version>

@@ -27,11 +27,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore-nio-parent</artifactId>
+        <version>4.3.3.wso2v2-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+
     <groupId>org.apache.httpcomponents.wso2</groupId>
     <artifactId>httpcore-nio</artifactId>
     <name>Apache HTTPCore-NIO - WSO2 Orbit</name>
-    <packaging>bundle</packaging>
     <version>4.3.3.wso2v2-SNAPSHOT</version>
+    <packaging>bundle</packaging>
 
     <inceptionYear>2005</inceptionYear>
     <description>
@@ -56,7 +63,7 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore-nio</artifactId>
-            <version>4.3.3.wso2v2-SNAPSHOT</version>
+            <version>${httpcore.nio.version}</version>
             <optional>true</optional>
             <exclusions>
                 <exclusion>
@@ -79,11 +86,11 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Export-Package>
-                            org.apache.http.nio.*;version="${httpcore.nio.version}",
-                            org.apache.http.impl.nio.*;version="${httpcore.nio.version}",
+                            org.apache.http.nio.*;version="${httpcore.nio.exp.pkg.version}",
+                            org.apache.http.impl.nio.*;version="${httpcore.nio.exp.pkg.version}",
                         </Export-Package>
                         <Import-Package>
-                            org.apache.http.*;version="${httpcore.version}",
+                            org.apache.http.*;version="${httpcore.imp.pkg.version}",
                             *;resolution:=optional
                         </Import-Package>
                     </instructions>
@@ -104,12 +111,5 @@
             <url>http://maven.wso2.org/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
-    <properties>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
-        <project.scm.id>scm-server</project.scm.id>
-        <httpcore.version>[4.3.3.wso2v1, 4.4.0)</httpcore.version>
-        <httpcore.nio.version>4.3.3.wso2v2-SNAPSHOT</httpcore.nio.version>
-    </properties>
 
 </project>
