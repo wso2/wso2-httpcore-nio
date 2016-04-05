@@ -34,7 +34,7 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.apache.httpcomponents.wso2</groupId>
+    <groupId>org.wso2.orbit.org.apache.httpcomponents</groupId>
     <artifactId>httpcore-nio</artifactId>
     <name>Apache HTTPCore-NIO - WSO2 Orbit</name>
     <version>4.3.3.wso2v2-SNAPSHOT</version>
