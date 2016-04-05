@@ -37,7 +37,6 @@
     <groupId>org.apache.httpcomponents.wso2</groupId>
     <artifactId>httpcore-nio</artifactId>
     <name>Apache HTTPCore-NIO - WSO2 Orbit</name>
-    <version>4.3.3.wso2v2-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
     <inceptionYear>2005</inceptionYear>
@@ -63,14 +62,6 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore-nio</artifactId>
-            <version>${httpcore.nio.version}</version>
-            <optional>true</optional>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpcore</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
@@ -86,8 +77,8 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Export-Package>
-                            org.apache.http.nio.*;version="${httpcore.nio.exp.pkg.version}",
-                            org.apache.http.impl.nio.*;version="${httpcore.nio.exp.pkg.version}",
+                            org.apache.http.nio.*;version="${project.version}",
+                            org.apache.http.impl.nio.*;version="${project.version}",
                         </Export-Package>
                         <Import-Package>
                             org.apache.http.*;version="${httpcore.imp.pkg.version}",
