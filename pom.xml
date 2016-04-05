@@ -35,7 +35,7 @@
 
     <artifactId>httpcore-nio-parent</artifactId>
     <name>Apache HTTPCore-NIO - Parent</name>
-    <version>4.3.3.wso2v2-SNAPSHOT</version>
+    <version>4.3.3-wso2v2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <inceptionYear>2005</inceptionYear>

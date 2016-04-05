@@ -56,7 +56,7 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore-nio</artifactId>
-            <version>${project.version}</version>
+            <version>${version.httpcore.nio}</version>
             <optional>true</optional>
             <exclusions>
                 <exclusion>
@@ -93,6 +93,8 @@
     </build>
 
     <properties>
+        <!-- Manually need to change when doing a release -->
+        <version.httpcore.nio>4.3.3-wso2v2-SNAPSHOT</version.httpcore.nio>
         <httpcore.imp.pkg.version>[4.3.3.wso2v1, 4.4.0)</httpcore.imp.pkg.version>
     </properties>
 
