@@ -35,7 +35,7 @@
 
     <inceptionYear>2005</inceptionYear>
     <description>
-        HttpComponents Core (non-blocking I/O)
+        This bundle will export packages for HTTPCore-NIO.
     </description>
     <url>http://hc.apache.org/httpcomponents-core-ga</url>
 
