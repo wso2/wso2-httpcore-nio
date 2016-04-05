@@ -55,10 +55,8 @@
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <project.scm.id>scm-server</project.scm.id>
         <httpcore.version>4.3.3</httpcore.version>
-        <httpcore.nio.version>4.3.3.wso2v2-SNAPSHOT</httpcore.nio.version>
 
         <httpcore.imp.pkg.version>[4.3.3.wso2v1, 4.4.0)</httpcore.imp.pkg.version>
-        <httpcore.nio.exp.pkg.version>${httpcore.nio.version}</httpcore.nio.exp.pkg.version>
 
         <junit.version>4.9</junit.version>
         <mockito.version>1.8.5</mockito.version>
@@ -89,6 +87,20 @@
                 <artifactId>commons-logging</artifactId>
                 <version>${commons-logging.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <!-- For Orbit bundle creation -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore-nio</artifactId>
+                <version>${project.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpcore</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
