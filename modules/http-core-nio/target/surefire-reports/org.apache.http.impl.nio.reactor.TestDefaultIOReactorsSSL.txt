@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.apache.http.impl.nio.reactor.TestDefaultIOReactorsSSL
--------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.078 sec - in org.apache.http.impl.nio.reactor.TestDefaultIOReactorsSSL
