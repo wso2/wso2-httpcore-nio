@@ -33,7 +33,7 @@
         <version>1</version>
     </parent>
 
-    <groupId>org.apache.httpcomponents</groupId>
+    <groupId>org.wso2.org.apache.httpcomponents</groupId>
     <artifactId>httpcore-nio-parent</artifactId>
     <name>Apache HTTPCore-NIO - Parent</name>
     <version>4.3.3-wso2v2-SNAPSHOT</version>
@@ -94,7 +94,7 @@
 
             <!-- For Orbit bundle -->
             <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
+                <groupId>org.wso2.org.apache.httpcomponents</groupId>
                 <artifactId>httpcore-nio</artifactId>
                 <version>${httpcore.nio.version}</version>
                 <optional>true</optional>
