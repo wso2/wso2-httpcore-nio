@@ -33,9 +33,9 @@
         <version>1</version>
     </parent>
 
-    <groupId>org.wso2.org.apache.httpcomponents</groupId>
+    <groupId>org.wso2.httpcomponents</groupId>
     <artifactId>httpcore-nio-parent</artifactId>
-    <name>Apache HTTPCore-NIO - Parent</name>
+    <name>Apache HTTPCore-NIO - WSO2 Parent</name>
     <version>4.3.3-wso2v2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -91,19 +91,10 @@
                 <version>${commons-logging.version}</version>
                 <scope>test</scope>
             </dependency>
-
-            <!-- For Orbit bundle -->
             <dependency>
-                <groupId>org.wso2.org.apache.httpcomponents</groupId>
+                <groupId>org.wso2.httpcomponents</groupId>
                 <artifactId>httpcore-nio</artifactId>
                 <version>${httpcore.nio.version}</version>
-                <optional>true</optional>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.httpcomponents</groupId>
-                        <artifactId>httpcore</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -125,8 +116,8 @@
     </build>
 
     <modules>
-        <module>modules/http-core-nio</module>
-        <module>orbit/http-core-nio</module>
+        <module>modules/httpcore-nio</module>
+        <module>orbit/httpcore-nio</module>
     </modules>
 
 </project>
