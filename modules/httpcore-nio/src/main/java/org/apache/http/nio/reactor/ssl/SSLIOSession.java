@@ -44,6 +44,7 @@ import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLSession;
 
 import org.apache.http.annotation.ThreadSafe;
+import org.apache.http.impl.nio.reactor.IOSessionImpl;
 import org.apache.http.nio.reactor.EventMask;
 import org.apache.http.nio.reactor.IOSession;
 import org.apache.http.nio.reactor.SessionBufferStatus;
@@ -351,6 +352,8 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
         // Update the mask if necessary
         if (oldMask != newMask) {
             this.session.setEventMask(newMask);
+        } else {
+            ((IOSessionImpl) this.session).getKey().selector().wakeup();
         }
     }
 
