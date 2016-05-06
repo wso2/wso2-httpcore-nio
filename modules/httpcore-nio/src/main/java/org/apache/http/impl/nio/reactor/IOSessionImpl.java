@@ -359,4 +359,7 @@ public class IOSessionImpl implements IOSession, SocketAccessor {
         }
     }
 
+    public SelectionKey getKey() {
+        return key;
+    }
 }
