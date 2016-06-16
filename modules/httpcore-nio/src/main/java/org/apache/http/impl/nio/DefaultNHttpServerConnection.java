@@ -28,6 +28,7 @@
 package org.apache.http.impl.nio;
 
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CharsetEncoder;
@@ -243,6 +244,9 @@ public class DefaultNHttpServerConnection
         this.response = null;
         this.contentEncoder = null;
         this.responseWriter.reset();
+        if (this.inbuf.length() > 0) {
+            inbuf.read(ByteBuffer.allocate(inbuf.capacity()));
+        }
     }
 
     public void consumeInput(final NHttpServerEventHandler handler) {
