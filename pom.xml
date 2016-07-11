@@ -35,7 +35,7 @@
     <groupId>org.wso2.httpcomponents</groupId>
     <artifactId>httpcore-nio-parent</artifactId>
     <name>Apache HTTPCore-NIO - WSO2 Parent</name>
-    <version>4.3.3-wso2v4</version>
+    <version>4.3.3-wso2v5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <inceptionYear>2005</inceptionYear>
@@ -48,12 +48,12 @@
         <connection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</connection>
         <developerConnection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</developerConnection>
         <url>https://github.com/wso2/wso2-httpcore-nio.git/</url>
-        <tag>v4.3.3-wso2v4</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
         <!-- Manually need to change when doing a release -->
-        <httpcore.nio.version>4.3.3-wso2v4</httpcore.nio.version>
+        <httpcore.nio.version>4.3.3-wso2v5-SNAPSHOT</httpcore.nio.version>
         <httpcore.imp.pkg.version>[4.3.3.wso2v1, 4.4.0)</httpcore.imp.pkg.version>
 
         <maven.javadoc.skip>true</maven.javadoc.skip>
