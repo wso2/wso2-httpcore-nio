@@ -90,7 +90,7 @@ public class ChunkEncoder extends AbstractContentEncoder {
         assertNotCompleted();
 
         int total = 0;
-        while (src.hasRemaining()) {
+        if (src.hasRemaining()) {
             int chunk = src.remaining();
             int avail;
             if (this.bufferinfo != null) {
@@ -128,7 +128,7 @@ public class ChunkEncoder extends AbstractContentEncoder {
             if (this.buffer.length() >= this.fragHint || src.hasRemaining()) {
                 final int bytesWritten = flushToChannel();
                 if (bytesWritten == 0) {
-                    break;
+                    return total;
                 }
             }
         }
