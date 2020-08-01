@@ -336,10 +336,10 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
             newMask = EventMask.READ;
             break;
         case NOT_HANDSHAKING:
-            if (!(status == CLOSING && !isInboundDone() && isOutboundDone())) {
-                newMask = this.appEventMask;
-            } else {
+            if (this.status >= CLOSING && isOutboundDone()) {
                 newMask = EventMask.READ;
+            } else {
+                newMask = this.appEventMask;
             }
             break;
         case NEED_TASK:
