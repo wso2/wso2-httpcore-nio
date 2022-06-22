@@ -36,6 +36,7 @@ import java.nio.charset.CharsetEncoder;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpEntityEnclosingRequest;
 import org.apache.http.HttpException;
+import org.apache.http.HttpMessage;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpRequestFactory;
 import org.apache.http.HttpResponse;
@@ -49,6 +50,7 @@ import org.apache.http.impl.nio.codecs.DefaultHttpRequestParser;
 import org.apache.http.impl.nio.codecs.DefaultHttpRequestParserFactory;
 import org.apache.http.impl.nio.codecs.DefaultHttpResponseWriter;
 import org.apache.http.impl.nio.codecs.DefaultHttpResponseWriterFactory;
+import org.apache.http.nio.ContentDecoder;
 import org.apache.http.nio.NHttpMessageParser;
 import org.apache.http.nio.NHttpMessageParserFactory;
 import org.apache.http.nio.NHttpMessageWriter;
@@ -61,9 +63,15 @@ import org.apache.http.nio.reactor.IOSession;
 import org.apache.http.nio.reactor.SessionInputBuffer;
 import org.apache.http.nio.reactor.SessionOutputBuffer;
 import org.apache.http.nio.util.ByteBufferAllocator;
+import org.apache.http.nio.util.HeapByteBufferAllocator;
 import org.apache.http.params.HttpParamConfig;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.Args;
+
+import java.io.IOException;
+import java.nio.channels.SelectionKey;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.CharsetEncoder;
 
 /**
  * Default implementation of the {@link org.apache.http.nio.NHttpServerConnection}
@@ -78,6 +86,7 @@ public class DefaultNHttpServerConnection
 
     protected final NHttpMessageParser<HttpRequest> requestParser;
     protected final NHttpMessageWriter<HttpResponse> responseWriter;
+    protected volatile ContentDecoder discardContentDecoder;
 
     /**
      * Creates a new instance of this class given the underlying I/O session.
@@ -273,10 +282,12 @@ public class DefaultNHttpServerConnection
                     this.connMetrics.incrementRequestCount();
                     onRequestReceived(this.request);
                     handler.requestReceived(this);
-                    if (this.contentDecoder == null) {
+                    if (this.contentDecoder == null && !this.hasBufferedInput) {
                         // No request entity is expected
                         // Ready to receive a new request
                         resetInput();
+                    } else {
+                        createDiscardDecoder(this.request);
                     }
                 }
                 if (bytesRead == -1) {
@@ -290,6 +301,15 @@ public class DefaultNHttpServerConnection
                     // Ready to receive a new request
                     resetInput();
                 }
+            } else if (discardContentDecoder != null && (this.session.getEventMask() & SelectionKey.OP_READ) > 0) {
+                ByteBufferImpl dummyBuffer = getByteBuffer(1024);
+                setInputMode(dummyBuffer);
+                discardContentDecoder.read(dummyBuffer.getByteBuffer());
+                if (this.discardContentDecoder.isCompleted()) {
+                    this.request = null;
+                    this.discardContentDecoder = null;
+                    this.requestParser.reset();
+                }
             }
         } catch (final HttpException ex) {
             resetInput();
@@ -300,6 +320,30 @@ public class DefaultNHttpServerConnection
             // Finally set buffered input flag
             this.hasBufferedInput = this.inbuf.hasData();
         }
+    }
+
+    private ByteBufferImpl getByteBuffer(int size) {
+
+        return new ByteBufferImpl((new HeapByteBufferAllocator()).allocate(size * 8));
+    }
+
+    private void setInputMode(ByteBufferImpl buffer) {
+
+        if (buffer.setInputMode()) {
+            if (buffer.hasRemaining()) {
+                buffer.compact();
+            } else {
+                buffer.clear();
+            }
+        }
+    }
+
+    protected void createDiscardDecoder(final HttpMessage message) throws HttpException {
+
+        final long len = this.incomingContentStrategy.determineLength(message);
+        this.discardContentDecoder = createContentDecoder(len, this.session.channel(), this.inbuf,
+                this.inTransportMetrics);
+
     }
 
     public void produceOutput(final NHttpServerEventHandler handler) {
