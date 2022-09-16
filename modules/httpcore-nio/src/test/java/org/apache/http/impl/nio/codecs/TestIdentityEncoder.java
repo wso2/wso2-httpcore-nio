@@ -474,19 +474,20 @@ public class TestIdentityEncoder {
 
         final IdentityEncoder encoder = new IdentityEncoder(channel, outbuf, metrics, 8);
         Assert.assertEquals(5, encoder.write(CodecTestUtils.wrap("stuff")));
-        Assert.assertEquals(6, encoder.write(CodecTestUtils.wrap("-stuff")));
+        // Only 3bytes (fragmentSizeHint - buffer.length) available to write
+        Assert.assertEquals(3, encoder.write(CodecTestUtils.wrap("-stuff")));
 
         Mockito.verify(channel, Mockito.times(1)).write(Mockito.<ByteBuffer>any());
-        Mockito.verify(outbuf, Mockito.times(3)).write(Mockito.<ByteBuffer>any());
+        Mockito.verify(outbuf, Mockito.times(2)).write(Mockito.<ByteBuffer>any());
         Mockito.verify(outbuf, Mockito.times(1)).flush(channel);
 
         Assert.assertEquals(8, metrics.getBytesTransferred());
-        Assert.assertEquals(3, outbuf.length());
+        Assert.assertEquals(0, outbuf.length());
 
         outbuf.flush(channel);
         final String s = channel.dump(Consts.ASCII);
 
-        Assert.assertEquals("stuff-stuff", s);
+        Assert.assertEquals("stuff-st", s);
     }
 
     @Test
@@ -554,7 +555,7 @@ public class TestIdentityEncoder {
         Assert.assertEquals(1, encoder.write(CodecTestUtils.wrap("-")));
         Assert.assertEquals(1, encoder.write(CodecTestUtils.wrap("much more stuff")));
 
-        Mockito.verify(channel, Mockito.times(3)).write(Mockito.<ByteBuffer>any());
+        Mockito.verify(channel, Mockito.times(2)).write(Mockito.<ByteBuffer>any());
         Mockito.verify(outbuf, Mockito.times(3)).write(Mockito.<ByteBuffer>any());
         Mockito.verify(outbuf, Mockito.times(1)).flush(channel);
 

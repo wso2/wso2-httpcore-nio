@@ -88,7 +88,7 @@ public class IdentityEncoder extends AbstractContentEncoder
         assertNotCompleted();
 
         int total = 0;
-        while (src.hasRemaining()) {
+        if(src.hasRemaining()){
             if (this.buffer.hasData() || this.fragHint > 0) {
                 if (src.remaining() <= this.fragHint) {
                     final int capacity = this.fragHint - this.buffer.length();
@@ -103,7 +103,7 @@ public class IdentityEncoder extends AbstractContentEncoder
                 if (this.buffer.length() >= this.fragHint || src.hasRemaining()) {
                     final int bytesWritten = flushToChannel();
                     if (bytesWritten == 0) {
-                        break;
+                        return total;
                     }
                 }
             }
@@ -111,7 +111,7 @@ public class IdentityEncoder extends AbstractContentEncoder
                 final int bytesWritten = writeToChannel(src);
                 total += bytesWritten;
                 if (bytesWritten == 0) {
-                    break;
+                    return total;
                 }
             }
         }
