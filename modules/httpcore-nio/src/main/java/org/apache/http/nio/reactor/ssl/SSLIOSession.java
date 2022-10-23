@@ -493,6 +493,9 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
             final SSLEngineResult result = doWrap(src, this.outEncrypted);
             if (result.getStatus() == Status.CLOSED) {
                 this.status = CLOSED;
+                // changing only the status will prevent the shutdown function being triggered.
+                // hence we need to close the session here itself to prevent error loops.
+                this.session.close();
             }
             return result.bytesConsumed();
         } else {
