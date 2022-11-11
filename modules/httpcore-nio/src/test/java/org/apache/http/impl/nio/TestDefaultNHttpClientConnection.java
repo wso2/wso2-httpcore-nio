@@ -322,7 +322,7 @@ public class TestDefaultNHttpClientConnection {
         Mockito.verify(wchannel, Mockito.times(3)).write(Matchers.<ByteBuffer>any());
     }
 
-//    @Test
+    @Test
     public void testProduceOutputLongChunkedMessage() throws Exception {
         conn = new DefaultNHttpClientConnection(session, 64);
 
@@ -353,7 +353,7 @@ public class TestDefaultNHttpClientConnection {
         Mockito.verify(wchannel, Mockito.times(2)).write(Matchers.<ByteBuffer>any());
     }
 
-//    @Test
+    @Test
     public void testProduceOutputLongChunkedMessageSaturatedChannel() throws Exception {
         conn = new DefaultNHttpClientConnection(session, 64);
 
