@@ -33,6 +33,7 @@ import java.net.Socket;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.ByteChannel;
+import java.nio.channels.ClosedChannelException;
 import java.nio.channels.SelectionKey;
 
 import javax.net.ssl.SSLContext;
@@ -98,6 +99,8 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
     private volatile SSLMode sslMode;
     private volatile int status;
     private volatile boolean initialized;
+
+    private volatile boolean terminated;
 
     /**
      * Creates new instance of <tt>SSLIOSession</tt> class.
@@ -425,6 +428,10 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
             if (status == HandshakeStatus.NOT_HANDSHAKING || status == HandshakeStatus.FINISHED) {
                 decryptData();
             }
+            if (this.terminated) {
+                // Discard any remaining input data
+                this.inPlain.clear();
+            }
         } while (this.sslEngine.getHandshakeStatus() == HandshakeStatus.NEED_TASK);
         // Some decrypted data is available or at the end of stream
         return (this.appEventMask & SelectionKey.OP_READ) > 0
@@ -479,10 +486,10 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
         return this.sslEngine.isOutboundDone();
     }
 
-    private synchronized int writePlain(final ByteBuffer src) throws SSLException {
+    private synchronized int writePlain(final ByteBuffer src) throws IOException {
         Args.notNull(src, "Byte buffer");
         if (this.status != ACTIVE) {
-            return -1;
+            throw new ClosedChannelException();
         }
         if (this.outPlain.position() > 0) {
             this.outPlain.flip();
@@ -520,6 +527,7 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
     }
 
     public synchronized void close() {
+        this.terminated = true;
         if (this.status >= CLOSING) {
             return;
         }
