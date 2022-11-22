@@ -54,8 +54,6 @@
     </modules>
 
     <properties>
-        <!-- Manually need to change when doing a release -->
-        <httpcore.nio.version>4.4.15-wso2v1</httpcore.nio.version>
         <httpcore.imp.pkg.version>[4.4.15, 4.5.0)</httpcore.imp.pkg.version>
         <httpcore.version>4.4.15</httpcore.version>
 
@@ -103,7 +101,7 @@
             <dependency>
                 <groupId>org.wso2.httpcomponents</groupId>
                 <artifactId>httpcore-nio</artifactId>
-                <version>${httpcore.nio.version}</version>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
