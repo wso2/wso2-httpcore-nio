@@ -34,7 +34,7 @@
     <groupId>org.wso2.httpcomponents</groupId>
     <artifactId>httpcore-nio-parent</artifactId>
     <name>Apache HTTPCore-NIO - WSO2 Parent</name>
-    <version>4.4.15-wso2v3-SNAPSHOT</version>
+    <version>4.4.16-wso2v1-SNAPSHOT</version>
     <description>HttpComponents Core (non-blocking I/O)</description>
     <url>http://hc.apache.org/httpcomponents-core-ga</url>
     <inceptionYear>2005</inceptionYear>
@@ -53,8 +53,8 @@
     </modules>
 
     <properties>
-        <httpcore.imp.pkg.version>[4.4.15, 4.5.0)</httpcore.imp.pkg.version>
-        <httpcore.version>4.4.15</httpcore.version>
+        <httpcore.imp.pkg.version>[4.4.16, 4.5.0)</httpcore.imp.pkg.version>
+        <httpcore.version>4.4.16</httpcore.version>
 
         <!-- Override parent 7 setting for deprecation (only - other settings stand)-->
         <maven.compiler.source>1.6</maven.compiler.source>
