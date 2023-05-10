@@ -34,7 +34,7 @@
     <groupId>org.wso2.httpcomponents</groupId>
     <artifactId>httpcore-nio-parent</artifactId>
     <name>Apache HTTPCore-NIO - WSO2 Parent</name>
-    <version>4.4.16-wso2v1-SNAPSHOT</version>
+    <version>4.4.16-wso2v1</version>
     <description>HttpComponents Core (non-blocking I/O)</description>
     <url>http://hc.apache.org/httpcomponents-core-ga</url>
     <inceptionYear>2005</inceptionYear>
@@ -44,7 +44,7 @@
         <connection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</connection>
         <developerConnection>scm:git:https://github.com/wso2/wso2-httpcore-nio.git</developerConnection>
         <url>https://github.com/wso2/wso2-httpcore-nio.git/</url>
-        <tag>4.4.15-wso2v2-SNAPSHOT</tag>
+        <tag>v4.4.16-wso2v1</tag>
     </scm>
 
     <modules>
