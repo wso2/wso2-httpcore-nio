@@ -643,7 +643,7 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
             }
             return n;
         }
-        return this.endOfStream ? -1 : 0;
+        return this.endOfStream && !this.inEncrypted.hasData() ? -1 : 0;
     }
 
     @Override
