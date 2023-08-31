@@ -425,7 +425,7 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
         }
 
         if (this.endOfStream &&
-                !this.inPlain.hasData() &&
+                !this.inPlain.hasData() && !this.inEncrypted.hasData() &&
                 (this.appBufferStatus == null || !this.appBufferStatus.hasBufferedInput())) {
             newMask = newMask & ~EventMask.READ;
         }
