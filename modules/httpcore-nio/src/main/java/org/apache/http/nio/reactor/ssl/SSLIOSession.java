@@ -383,7 +383,8 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
     private void updateEventMask() {
         // Graceful session termination
         if (this.status == ACTIVE
-                && (this.endOfStream || this.sslEngine.isInboundDone())) {
+                && (this.endOfStream || this.sslEngine.isInboundDone())
+                && !this.inPlain.hasData() && !this.inEncrypted.hasData()) {
             this.status = CLOSING;
         }
         if (this.status == CLOSING && !this.outEncrypted.hasData()) {
@@ -424,7 +425,7 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
         }
 
         if (this.endOfStream &&
-                !this.inPlain.hasData() &&
+                !this.inPlain.hasData() && !this.inEncrypted.hasData() &&
                 (this.appBufferStatus == null || !this.appBufferStatus.hasBufferedInput())) {
             newMask = newMask & ~EventMask.READ;
         }
@@ -642,7 +643,7 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
             }
             return n;
         }
-        return this.endOfStream ? -1 : 0;
+        return this.endOfStream && !this.inEncrypted.hasData() ? -1 : 0;
     }
 
     @Override
