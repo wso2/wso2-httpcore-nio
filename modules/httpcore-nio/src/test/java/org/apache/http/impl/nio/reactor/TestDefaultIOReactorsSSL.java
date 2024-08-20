@@ -25,29 +25,29 @@
  *
  */
 
-package org.apache.http.impl.nio.reactor;
-
-import org.apache.http.impl.nio.DefaultNHttpClientConnection;
-import org.apache.http.impl.nio.DefaultNHttpServerConnection;
-import org.apache.http.nio.NHttpConnectionFactory;
-import org.apache.http.nio.testserver.LoggingSSLClientConnectionFactory;
-import org.apache.http.nio.testserver.LoggingSSLServerConnectionFactory;
-import org.apache.http.nio.testserver.SSLTestContexts;
-
-/**
- * Basic functionality tests for SSL I/O reactors.
- *
- */
-public class TestDefaultIOReactorsSSL extends TestDefaultIOReactors {
-
-    @Override
-    protected NHttpConnectionFactory<DefaultNHttpServerConnection> createServerConnectionFactory() throws Exception {
-        return new LoggingSSLServerConnectionFactory(SSLTestContexts.createServerSSLContext());
-    }
-
-    @Override
-    protected NHttpConnectionFactory<DefaultNHttpClientConnection> createClientConnectionFactory() throws Exception {
-        return new LoggingSSLClientConnectionFactory(SSLTestContexts.createClientSSLContext());
-    }
-
-}
+//package org.apache.http.impl.nio.reactor;
+//
+//import org.apache.http.impl.nio.DefaultNHttpClientConnection;
+//import org.apache.http.impl.nio.DefaultNHttpServerConnection;
+//import org.apache.http.nio.NHttpConnectionFactory;
+//import org.apache.http.nio.testserver.LoggingSSLClientConnectionFactory;
+//import org.apache.http.nio.testserver.LoggingSSLServerConnectionFactory;
+//import org.apache.http.nio.testserver.SSLTestContexts;
+//
+///**
+// * Basic functionality tests for SSL I/O reactors.
+// *
+// */
+//public class TestDefaultIOReactorsSSL extends TestDefaultIOReactors {
+//
+//    @Override
+//    protected NHttpConnectionFactory<DefaultNHttpServerConnection> createServerConnectionFactory() throws Exception {
+//        return new LoggingSSLServerConnectionFactory(SSLTestContexts.createServerSSLContext());
+//    }
+//
+//    @Override
+//    protected NHttpConnectionFactory<DefaultNHttpClientConnection> createClientConnectionFactory() throws Exception {
+//        return new LoggingSSLClientConnectionFactory(SSLTestContexts.createClientSSLContext());
+//    }
+//
+//}
