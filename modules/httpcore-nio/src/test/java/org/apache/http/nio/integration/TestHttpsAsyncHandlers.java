@@ -25,6 +25,7 @@
  *
  */
 
+// TODO: Enable after test failures are fixed.
 //package org.apache.http.nio.integration;
 //
 //import org.apache.http.impl.nio.DefaultNHttpClientConnection;

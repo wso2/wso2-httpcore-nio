@@ -82,6 +82,7 @@ public class TestCustomSSL {
         }
     }
 
+//    TODO: Enable after failures are fixed.
 //    @Test
 //    public void testCustomSSLContext() throws Exception {
 //        final SSLSetupHandler sslSetupHandler = new SSLSetupHandler() {

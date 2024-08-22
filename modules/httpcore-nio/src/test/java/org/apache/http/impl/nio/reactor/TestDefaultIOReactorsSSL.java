@@ -24,7 +24,7 @@
  * <http://www.apache.org/>.
  *
  */
-
+// TODO: Enable test after failures are fixed.
 //package org.apache.http.impl.nio.reactor;
 //
 //import org.apache.http.impl.nio.DefaultNHttpClientConnection;
