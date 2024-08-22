@@ -51,6 +51,7 @@ import org.apache.http.protocol.HttpCoreContext;
 import org.apache.http.protocol.HttpRequestHandler;
 import org.junit.After;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.net.ssl.SSLEngine;
@@ -83,67 +84,68 @@ public class TestCustomSSL {
     }
 
 //    TODO: Enable after failures are fixed.
-//    @Test
-//    public void testCustomSSLContext() throws Exception {
-//        final SSLSetupHandler sslSetupHandler = new SSLSetupHandler() {
-//
-//            public void initalize(
-//                    final SSLEngine sslengine) throws SSLException {
-//            }
-//
-//            public void verify(
-//                    final IOSession iosession, final SSLSession sslsession) throws SSLException {
-//                final BigInteger sslid = new BigInteger(sslsession.getId());
-//                iosession.setAttribute("ssl-id", sslid);
-//            }
-//
-//        };
-//
-//        final HttpRequestHandler requestHandler = new HttpRequestHandler() {
-//
-//            public void handle(
-//                    final HttpRequest request,
-//                    final HttpResponse response,
-//                    final HttpContext context) throws HttpException, IOException {
-//                final NHttpConnection conn = (NHttpConnection) context.getAttribute(
-//                        HttpCoreContext.HTTP_CONNECTION);
-//                final BigInteger sslid = (BigInteger) conn.getContext().getAttribute(
-//                        "ssl-id");
-//                Assert.assertNotNull(sslid);
-//            }
-//
-//        };
-//
-//        this.server = new HttpServerNio(
-//                new LoggingSSLServerConnectionFactory(
-//                        SSLTestContexts.createServerSSLContext(), sslSetupHandler));
-//        this.server.setExceptionHandler(new SimpleIOReactorExceptionHandler());
-//        this.server.setTimeout(5000);
-//        this.client = new HttpClientNio(
-//                new BasicNIOConnFactory(
-//                        new LoggingSSLClientConnectionFactory(
-//                                SSLTestContexts.createClientSSLContext()), null));
-//        this.client.setExceptionHandler(new SimpleIOReactorExceptionHandler());
-//        this.client.setTimeout(5000);
-//
-//        final UriHttpAsyncRequestHandlerMapper registry = new UriHttpAsyncRequestHandlerMapper();
-//        registry.register("*", new BasicAsyncRequestHandler(requestHandler));
-//
-//        this.server.start(HttpServerNio.DEFAULT_HTTP_PROC, registry, null);
-//        this.client.start(HttpClientNio.DEFAULT_HTTP_PROC);
-//
-//        final ListenerEndpoint endpoint = this.server.getListenerEndpoint();
-//        endpoint.waitFor();
-//
-//        Assert.assertEquals("Test server status", IOReactorStatus.ACTIVE, this.server.getStatus());
-//        final InetSocketAddress address = (InetSocketAddress) endpoint.getAddress();
-//
-//        final HttpHost target = new HttpHost("localhost", address.getPort());
-//        final BasicHttpRequest request = new BasicHttpRequest("GET", "/");
-//        final Future<HttpResponse> future = this.client.execute(target, request);
-//        final HttpResponse response = future.get();
-//        Assert.assertNotNull(response);
-//        Assert.assertEquals(200, response.getStatusLine().getStatusCode());
-//    }
+    @Ignore("Disabled due to build failing in workflows")
+    @Test
+    public void testCustomSSLContext() throws Exception {
+        final SSLSetupHandler sslSetupHandler = new SSLSetupHandler() {
+
+            public void initalize(
+                    final SSLEngine sslengine) throws SSLException {
+            }
+
+            public void verify(
+                    final IOSession iosession, final SSLSession sslsession) throws SSLException {
+                final BigInteger sslid = new BigInteger(sslsession.getId());
+                iosession.setAttribute("ssl-id", sslid);
+            }
+
+        };
+
+        final HttpRequestHandler requestHandler = new HttpRequestHandler() {
+
+            public void handle(
+                    final HttpRequest request,
+                    final HttpResponse response,
+                    final HttpContext context) throws HttpException, IOException {
+                final NHttpConnection conn = (NHttpConnection) context.getAttribute(
+                        HttpCoreContext.HTTP_CONNECTION);
+                final BigInteger sslid = (BigInteger) conn.getContext().getAttribute(
+                        "ssl-id");
+                Assert.assertNotNull(sslid);
+            }
+
+        };
+
+        this.server = new HttpServerNio(
+                new LoggingSSLServerConnectionFactory(
+                        SSLTestContexts.createServerSSLContext(), sslSetupHandler));
+        this.server.setExceptionHandler(new SimpleIOReactorExceptionHandler());
+        this.server.setTimeout(5000);
+        this.client = new HttpClientNio(
+                new BasicNIOConnFactory(
+                        new LoggingSSLClientConnectionFactory(
+                                SSLTestContexts.createClientSSLContext()), null));
+        this.client.setExceptionHandler(new SimpleIOReactorExceptionHandler());
+        this.client.setTimeout(5000);
+
+        final UriHttpAsyncRequestHandlerMapper registry = new UriHttpAsyncRequestHandlerMapper();
+        registry.register("*", new BasicAsyncRequestHandler(requestHandler));
+
+        this.server.start(HttpServerNio.DEFAULT_HTTP_PROC, registry, null);
+        this.client.start(HttpClientNio.DEFAULT_HTTP_PROC);
+
+        final ListenerEndpoint endpoint = this.server.getListenerEndpoint();
+        endpoint.waitFor();
+
+        Assert.assertEquals("Test server status", IOReactorStatus.ACTIVE, this.server.getStatus());
+        final InetSocketAddress address = (InetSocketAddress) endpoint.getAddress();
+
+        final HttpHost target = new HttpHost("localhost", address.getPort());
+        final BasicHttpRequest request = new BasicHttpRequest("GET", "/");
+        final Future<HttpResponse> future = this.client.execute(target, request);
+        final HttpResponse response = future.get();
+        Assert.assertNotNull(response);
+        Assert.assertEquals(200, response.getStatusLine().getStatusCode());
+    }
 
 }

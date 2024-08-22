@@ -24,30 +24,33 @@
  * <http://www.apache.org/>.
  *
  */
-// TODO: Enable test after failures are fixed.
-//package org.apache.http.impl.nio.reactor;
-//
-//import org.apache.http.impl.nio.DefaultNHttpClientConnection;
-//import org.apache.http.impl.nio.DefaultNHttpServerConnection;
-//import org.apache.http.nio.NHttpConnectionFactory;
-//import org.apache.http.nio.testserver.LoggingSSLClientConnectionFactory;
-//import org.apache.http.nio.testserver.LoggingSSLServerConnectionFactory;
-//import org.apache.http.nio.testserver.SSLTestContexts;
-//
-///**
-// * Basic functionality tests for SSL I/O reactors.
-// *
-// */
-//public class TestDefaultIOReactorsSSL extends TestDefaultIOReactors {
-//
-//    @Override
-//    protected NHttpConnectionFactory<DefaultNHttpServerConnection> createServerConnectionFactory() throws Exception {
-//        return new LoggingSSLServerConnectionFactory(SSLTestContexts.createServerSSLContext());
-//    }
-//
-//    @Override
-//    protected NHttpConnectionFactory<DefaultNHttpClientConnection> createClientConnectionFactory() throws Exception {
-//        return new LoggingSSLClientConnectionFactory(SSLTestContexts.createClientSSLContext());
-//    }
-//
-//}
+
+package org.apache.http.impl.nio.reactor;
+
+import org.apache.http.impl.nio.DefaultNHttpClientConnection;
+import org.apache.http.impl.nio.DefaultNHttpServerConnection;
+import org.apache.http.nio.NHttpConnectionFactory;
+import org.apache.http.nio.testserver.LoggingSSLClientConnectionFactory;
+import org.apache.http.nio.testserver.LoggingSSLServerConnectionFactory;
+import org.apache.http.nio.testserver.SSLTestContexts;
+import org.junit.Ignore;
+
+/**
+ * Basic functionality tests for SSL I/O reactors.
+ *
+ */
+// TODO: Enable after test failures are fixed.
+@Ignore("Disabled due to build failing in workflows")
+public class TestDefaultIOReactorsSSL extends TestDefaultIOReactors {
+
+    @Override
+    protected NHttpConnectionFactory<DefaultNHttpServerConnection> createServerConnectionFactory() throws Exception {
+        return new LoggingSSLServerConnectionFactory(SSLTestContexts.createServerSSLContext());
+    }
+
+    @Override
+    protected NHttpConnectionFactory<DefaultNHttpClientConnection> createClientConnectionFactory() throws Exception {
+        return new LoggingSSLClientConnectionFactory(SSLTestContexts.createClientSSLContext());
+    }
+
+}
