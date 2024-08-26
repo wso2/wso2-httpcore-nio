@@ -113,8 +113,7 @@
                             <value>file:../../log4j.properties</value>
                         </property>
                     </systemProperties>
-                    <argLine>-javaagent:target/lib/aspectjweaver.jar -Xms64m -Xmx128m</argLine>
-                    <argLine>${argLine}</argLine>
+                    <argLine>${argLine} -javaagent:target/lib/aspectjweaver.jar -Xms64m -Xmx128m</argLine>
                     <forkCount>0</forkCount>
                 </configuration>
             </plugin>
