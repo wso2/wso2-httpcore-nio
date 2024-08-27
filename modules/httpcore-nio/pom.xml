@@ -114,7 +114,6 @@
                         </property>
                     </systemProperties>
                     <argLine>@{argLine} -javaagent:target/lib/aspectjweaver.jar -Xms64m -Xmx128m</argLine>
-                    <forkMode>once</forkMode>
                 </configuration>
             </plugin>
         </plugins>
