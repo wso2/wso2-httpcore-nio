@@ -116,7 +116,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.4</version>
+                    <version>0.8.0</version>
                     <executions>
                         <execution>
                             <id>default-prepare-agent-by-coverage-enforcer</id>
@@ -130,6 +130,7 @@
                         </execution>
                         <execution>
                             <id>default-report-by-coverage-enforcer</id>
+                            <phase>test</phase>
                             <goals>
                                 <goal>report</goal>
                             </goals>
