@@ -34,11 +34,11 @@ import java.nio.channels.CancelledKeyException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Queue;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ThreadFactory;
 
@@ -81,7 +81,7 @@ public class DefaultListeningIOReactor extends AbstractMultiworkerIOReactor
             final ThreadFactory threadFactory) throws IOReactorException {
         super(config, threadFactory);
         this.requestQueue = new ConcurrentLinkedQueue<ListenerEndpointImpl>();
-        this.endpoints = Collections.synchronizedSet(new HashSet<ListenerEndpointImpl>());
+        this.endpoints = ConcurrentHashMap.newKeySet();
         this.pausedEndpoints = new HashSet<SocketAddress>();
     }
 
