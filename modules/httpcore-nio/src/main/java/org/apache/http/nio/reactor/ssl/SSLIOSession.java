@@ -526,6 +526,14 @@ public class SSLIOSession implements IOSession, SessionBufferStatus, SocketAcces
                 } else {
                     if (status == Status.BUFFER_UNDERFLOW && this.endOfStream) {
                         throw new SSLException("Unable to decrypt incoming data due to unexpected end of stream");
+                    } else if (status == Status.CLOSED && this.sslEngine.isInboundDone()) {
+                        if (this.inEncrypted.hasData()) {
+                            // Handle graceful TLS inbound closure by detecting when the SSLEngine has received or
+                            // sent the final close_notify and all encrypted data has been processed.
+                            // This marks the clean end-of-stream for TLS, where unwrap() will no longer produce data,
+                            // remaining encrypted bytes can be safely discarded, and the connection should be closed.
+                            inEncryptedBuf.clear();
+                        }
                     }
                     break;
                 }
