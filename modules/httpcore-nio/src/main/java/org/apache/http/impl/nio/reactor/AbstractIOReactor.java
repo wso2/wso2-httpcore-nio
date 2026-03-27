@@ -41,6 +41,8 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.http.nio.reactor.IOReactor;
 import org.apache.http.nio.reactor.IOReactorException;
 import org.apache.http.nio.reactor.IOReactorStatus;
@@ -56,6 +58,8 @@ import org.apache.http.util.Asserts;
  * @since 4.0
  */
 public abstract class AbstractIOReactor implements IOReactor {
+
+    private final Log log = LogFactory.getLog(AbstractIOReactor.class);
 
     private volatile IOReactorStatus status;
 
@@ -254,13 +258,18 @@ public abstract class AbstractIOReactor implements IOReactor {
                 try {
                     readyCount = this.selector.select(this.selectTimeout);
                 } catch (final InterruptedIOException ex) {
+                    log.warn("I/O reactor hard shutdown trigger : selector.select() was interrupted. ", ex);
                     throw ex;
                 } catch (final IOException ex) {
+                    log.warn("I/O reactor hard shutdown trigger : selector.select() failed. ", ex);
                     throw new IOReactorException("Unexpected selector failure", ex);
                 }
 
                 if (this.status == IOReactorStatus.SHUT_DOWN) {
                     // Hard shut down. Exit select loop immediately
+                    log.warn("I/O reactor execute loop detected SHUT_DOWN state. "
+                                    + "Exiting select loop immediately.",
+                            new Exception("I/O reactor hard shutdown path reached"));
                     break;
                 }
 
@@ -300,7 +309,11 @@ public abstract class AbstractIOReactor implements IOReactor {
 
             }
 
-        } catch (final ClosedSelectorException ignore) {
+        } catch (final ClosedSelectorException ex) {
+            log.warn("I/O reactor hard shutdown trigger: ClosedSelectorException in execute loop.", ex);
+        } catch (IOReactorException exception) {
+            log.warn("I/O reactor hard shutdown trigger: IOReactorException in execute loop.", exception);
+            throw exception;
         } finally {
             hardShutdown();
             synchronized (this.statusMutex) {
@@ -588,7 +601,6 @@ public abstract class AbstractIOReactor implements IOReactor {
             }
             this.status = IOReactorStatus.SHUT_DOWN;
         }
-
         closeNewChannels();
         closeActiveChannels();
         processClosedSessions();
@@ -627,6 +639,9 @@ public abstract class AbstractIOReactor implements IOReactor {
             }
         }
         if (this.status != IOReactorStatus.SHUT_DOWN) {
+            log.warn("I/O reactor hard shutdown trigger: Graceful shutdown " +
+                            "did not complete within the given grace period. Initiating hard shutdown.",
+                    new Exception("I/O reactor hard shutdown path reached"));
             hardShutdown();
         }
     }

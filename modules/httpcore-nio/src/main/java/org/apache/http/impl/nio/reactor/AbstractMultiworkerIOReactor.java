@@ -42,6 +42,8 @@ import java.util.List;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.http.nio.params.NIOReactorPNames;
 import org.apache.http.nio.reactor.IOEventDispatch;
 import org.apache.http.nio.reactor.IOReactor;
@@ -96,6 +98,8 @@ import org.apache.http.util.Asserts;
  */
 @SuppressWarnings("deprecation")
 public abstract class AbstractMultiworkerIOReactor implements IOReactor {
+
+    private final Log log = LogFactory.getLog(AbstractMultiworkerIOReactor.class);
 
     protected volatile IOReactorStatus status;
 
@@ -332,6 +336,9 @@ public abstract class AbstractMultiworkerIOReactor implements IOReactor {
 
             for (int i = 0; i < this.workerCount; i++) {
                 if (this.status != IOReactorStatus.ACTIVE) {
+                    log.warn("I/O reactor shutdown path: execute() is exiting before starting all worker threads "
+                                    + "because status changed to " + this.status + ".",
+                            new Exception("execute() exiting before worker startup completion"));
                     return;
                 }
                 this.threads[i].start();
@@ -342,8 +349,10 @@ public abstract class AbstractMultiworkerIOReactor implements IOReactor {
                 try {
                     readyCount = this.selector.select(this.selectTimeout);
                 } catch (final InterruptedIOException ex) {
+                    log.warn("I/O reactor hard shutdown trigger: selector.select() was interrupted.", ex);
                     throw ex;
                 } catch (final IOException ex) {
+                    log.warn("I/O reactor hard shutdown trigger: selector.select() failed.", ex);
                     throw new IOReactorException("Unexpected selector failure", ex);
                 }
 
@@ -362,13 +371,18 @@ public abstract class AbstractMultiworkerIOReactor implements IOReactor {
                 }
 
                 if (this.status.compareTo(IOReactorStatus.ACTIVE) > 0) {
+                    log.debug("I/O reactor shutdown path: execute() detected reactor status "
+                                    + this.status + " and is exiting the select loop.",
+                            new Exception("execute() exiting because reactor is no longer ACTIVE"));
                     break;
                 }
             }
 
         } catch (final ClosedSelectorException ex) {
+            log.warn("I/O reactor hard shutdown trigger: ClosedSelectorException in execute().", ex);
             addExceptionEvent(ex);
         } catch (final IOReactorException ex) {
+            log.warn("I/O reactor hard shutdown trigger: IOReactorException in execute().", ex);
             if (ex.getCause() != null) {
                 addExceptionEvent(ex.getCause());
             }
