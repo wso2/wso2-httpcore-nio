@@ -42,6 +42,8 @@ import java.util.List;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.http.nio.params.NIOReactorPNames;
 import org.apache.http.nio.reactor.IOEventDispatch;
 import org.apache.http.nio.reactor.IOReactor;
@@ -96,6 +98,8 @@ import org.apache.http.util.Asserts;
  */
 @SuppressWarnings("deprecation")
 public abstract class AbstractMultiworkerIOReactor implements IOReactor {
+
+    private static final Log log = LogFactory.getLog(AbstractMultiworkerIOReactor.class);
 
     protected volatile IOReactorStatus status;
 
@@ -372,6 +376,7 @@ public abstract class AbstractMultiworkerIOReactor implements IOReactor {
             if (ex.getCause() != null) {
                 addExceptionEvent(ex.getCause());
             }
+            log.warn("I/O reactor hard shutdown trigger: IOReactorException in execute()." + ex.getMessage(), ex);
             throw ex;
         } finally {
             doShutdown();
